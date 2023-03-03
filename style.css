@@ -1,0 +1,93 @@
+* {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 5em;
+}
+
+div.shortcuts {
+    margin-left: auto;
+    word-spacing: 1em;
+    padding-right: 5em;
+}
+
+main {
+    padding: 5em;
+}
+
+article.introduction div.headline {
+    font-size: 280%;
+    font-weight: bold;
+}
+
+article.introduction div.subtext {
+    font-size: 140%;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+article.introduction div.intro-text {
+    color: grey;
+}
+
+article.bottom-articles {
+    display: flex;
+}
+
+article.bottom-articles article div.headline {
+    padding-top: 3em;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+article.bottom-articles article div.subtext {
+    font-size: 80%;
+    color: grey;
+}
+
+
+section.field div.position {
+    padding-top: 1em;
+    font-weight: bold;
+}
+
+section.field div.company {
+    font-size: 85%;
+}
+
+section.field div.timeline {
+    padding-top: 0.2em;
+    font-size: 80%;
+    color: grey;
+}
+
+article.skills {
+    padding-left: 10em;
+}
+
+div.icons {
+    padding-top: 1em;
+}
+
+footer{
+    display: flex;
+}
+
+footer div {
+    margin-left: auto;
+    margin-right: auto
+}
+
+footer a {
+    color: #4b5563;
+    padding: 0.2em;
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    color: #6b7280;
+}
