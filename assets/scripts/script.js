@@ -16,11 +16,18 @@ window.addEventListener("load", event => {
     var typed = new Typed('article.code output', options);
    
   
-    //   This is id of HTML element (English) with attribute lng-tag
-    // document.querySelector("#enTranslator").addEventListener("click", event => {
-    //     translate('en', 'lng-tag');
-    // })
-    //This is id of HTML element (Khmer) with attribute lng-tag
+    
+    document.querySelector("#sun").addEventListener("click", event => {
+        darkModeToggle();
+        document.querySelector("#moon").style = "display: inherit;";
+        document.querySelector("#sun").style = "display: none;";
+    })
+
+    document.querySelector("#moon").addEventListener("click", event => {
+        darkModeToggle();
+        document.querySelector("#sun").style = "display: inherit;";
+        document.querySelector("#moon").style = "display: none;";
+    })
 
     
 });

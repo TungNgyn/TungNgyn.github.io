@@ -17,6 +17,23 @@ div.shortcuts {
     padding-right: 5em;
     display: flex;
 }
+
+div.shortcuts {
+    align-items: center;
+}
+
+div.shortcuts i:hover {
+    cursor: pointer;
+}
+
+div.shortcuts a {
+    margin: 1em;
+}
+
+div.shortcuts a:hover {
+    cursor: pointer;
+}
+
 div.shortcuts label {
     padding: 1em;
 }
@@ -61,21 +78,11 @@ section.titlebar {
   background: -o-linear-gradient(top, #ebebeb, #d5d5d5);
   background: linear-gradient(top, #ebebeb, #d5d5d5);
   color: #4d494d;
-  font-size: 11pt;
-  line-height: 20px;
-  text-align: center;
-  width: 100%;
   height: 20px;
   border-top: 1px solid #f3f1f3;
   border-bottom: 1px solid #b1aeb1;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  cursor: default;
 }
 
 div.buttons {
@@ -126,7 +133,6 @@ article.code output {
 }
 
 article.window {
-    background: #fff;
     width: 35em;
     height: 25em;
     border: 1px solid #acacac;
@@ -192,4 +198,32 @@ footer a {
 
 footer a:hover {
     color: #6b7280;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    main, header, footer, body, html{
+        background-color: #121212;
+        color: #E2E2E2;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    section.titlebar {
+        background-color: #202124;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #202124, color-stop(1.0, #202124)));
+        background: -webkit-linear-gradient(top, #202124, #202124);
+        background: -moz-linear-gradient(top, #202124, #202124);
+        background: -ms-linear-gradient(top, #202124, #202124);
+        background: -o-linear-gradient(top, #202124, #202124);
+        background: linear-gradient(top, #202124, #202124);
+        border-top: 1px solid #35363a;
+        border-bottom: 1px solid #35363a;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    article.window {
+        border: 1px solid #35363a;
+        box-shadow: 0px 0px 20px #35363a;
+    }
 }
