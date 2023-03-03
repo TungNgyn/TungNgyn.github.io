@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tung Nguyen</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
@@ -17,85 +17,88 @@
     <link href="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/css/flag-icons.min.css" rel="stylesheet">
     <script src="assets/scripts/script.js"></script>
 </head>
-<body>
+<body onload="translate('en','lng-tag')">
     <header>
-        <img src="icon.png"/>
+        <img src="assets/images/icon.png"/>
         <h1>Tung Nguyen</h1>
         <div class="shortcuts">
-            <button class="english">asdasd</button>
-            <label>Home</label>
-            <label>About</label>
-            <label>Contact</label>
+            <a class="fi fi-gb" id="enTranslator" href="javascript:void(0);"></a>
+            <a class="fi fi-de" id="deTranslator" href="javascript:void(0);"></a>
+            <label lng-tag="home">Home</label>
+            <label lng-tag="projects">Projects</label>
+            <label lng-tag="contact">Contact</label>
         </div>
     </header>
     <main>
-        <div class="left">
-            <article class="introduction">
-                <section class="Text">
-                    <div class="headline">Hello there</div>
-                    <div class="subtext">I'm Tung, mobile app developer and full-stack web developer.</div>
-                    <div class="intro-text">Currently based in Berlin, Germany retraining to start an IT career. I have a strong interest specializing in mobile development as well as full-stack web development.</div>
-                </section>
-            </article>
-            <article class="bottom-articles">
-                <article class="experience">
-                    <div class="headline">Experience</div>
-                    <div class="subtext">My experience in this field</div>
-                    <section class="field">
-                        <div class="position">Retraining</div>
-                        <div class="company">dama.go GmbH</div>
-                        <div class="timeline">Feb. 2022 - Feb. 2024</div>
+        <article class="home">
+            <div class="left">
+                <article class="introduction">
+                    <section class="Text">
+                        <div class="headline" lng-tag="intro_headline">Hello </div>
+                        <div class="subtext" lng-tag="intro_subtext">I'm Tung, mobile app developer and full-stack web developer.</div>
+                        <div class="intro-text" lng-tag="intro-text">Currently based in Berlin, Germany retraining to start an IT career. I have a strong interest specializing in mobile development as well as full-stack web development.</div>
                     </section>
                 </article>
+                <article class="bottom-articles">
+                    <article class="experience">
+                        <div class="headline" lng-tag="background_headline">Background</div>
+                        <div class="subtext" lng-tag="background_subtext">Experience I have gained</div>
+                        <section class="field">
+                            <div class="position" lng-tag="position_retraining">Retraining</div>
+                            <div class="company">dama.go GmbH</div>
+                            <div class="timeline">Feb. 2022 - Feb. 2024</div>
+                        </section>
+                    </article>
 
-                <article class="skills">
-                    <div class="headline">Skills</div>
-                    <div class="subtext">Languages, tools and platforms</div>
-                    <div class="icons">
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/java/java-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/kotlin/kotlin-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/csharp/csharp-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/javascript/javascript-original.svg"width="32" height="32" />
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/dart/dart-original.svg" width="32" height="32" />
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/flutter/flutter-original.svg" width="32" height="32" />
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/html5/html5-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/css3/css3-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/bash/bash-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/docker/docker-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/git/git-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/mysql/mysql-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/postgresql/postgresql-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/vim/vim-original.svg" width="32" height="32"/>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/windows8/windows8-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/linux/linux-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/apple/apple-original.svg" width="32" height="32"/>
-                        <img src="https://cdn.jsdelivr.net/npm/devicon/icons/android/android-original.svg" width="32" height="32"/>
-                    </div> 
+                    <article class="skills">
+                        <div class="headline" lng-tag="skills_headline">Skills</div>
+                        <div class="subtext" lng-tag="skills_subtext">Languages, tools and platforms</div>
+                        <div class="icons">
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/java/java-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/kotlin/kotlin-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/csharp/csharp-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/javascript/javascript-original.svg"width="32" height="32" />
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/dart/dart-original.svg" width="32" height="32" />
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/flutter/flutter-original.svg" width="32" height="32" />
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/html5/html5-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/css3/css3-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/bash/bash-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/docker/docker-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/git/git-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/mysql/mysql-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/postgresql/postgresql-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/vim/vim-original.svg" width="32" height="32"/>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/windows8/windows8-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/linux/linux-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/apple/apple-original.svg" width="32" height="32"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/android/android-original.svg" width="32" height="32"/>
+                        </div> 
+                    </article>
                 </article>
-            </article>
-        </div>
+            </div>
 
-        <div class="right">
-            <article class="window">
-                <section class="titlebar">
-                    <div class="buttons">
-                        <div class="close">
+            <div class="right">
+                <article class="window">
+                    <section class="titlebar">
+                        <div class="buttons">
+                            <div class="close">
+                            </div>
+                            <div class="minimize">
+                            </div>
+                            <div class="zoom">
+                            </div>
                         </div>
-                        <div class="minimize">
-                        </div>
-                        <div class="zoom">
-                        </div>
-                    </div>
-                </section>
-                <article class="code">
-                    <pre><output></output></pre>
+                    </section>
+                    <article class="code">
+                        <pre><output></output></pre>
+                    </article>
                 </article>
-            </article>
-        </div>
+            </div>
+        </article>
     </main>
     <footer>
         <div>

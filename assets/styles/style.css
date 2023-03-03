@@ -14,14 +14,26 @@ header img {
 
 div.shortcuts {
     margin-left: auto;
-    word-spacing: 1em;
     padding-right: 5em;
+    display: flex;
+}
+div.shortcuts label {
+    padding: 1em;
 }
 
 main {
     padding: 5em;
+}
+
+
+div.shortcuts a#enTranslator {
+    display: none;
+}
+
+article.home {
     display: flex;
 }
+
 article.introduction {
     max-width: 85%;
 }
