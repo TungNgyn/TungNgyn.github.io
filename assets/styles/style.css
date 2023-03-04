@@ -9,6 +9,10 @@ header {
     box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
 }
 
+h1 {
+    font-size: 180%;
+}
+
 header img {
     width: 5em;
 }
@@ -48,7 +52,7 @@ main {
 }
 
 
-div.shortcuts a#enTranslator {
+a#enTranslator {
     display: none;
 }
 
@@ -252,7 +256,7 @@ footer a:hover {
     div.shortcuts-mobile {
         display: block;
         margin-left: auto;
-        padding-right: 1.5em;
+        padding-right: 0.5em;
     }
 
     main{
