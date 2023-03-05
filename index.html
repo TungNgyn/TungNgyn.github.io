@@ -16,19 +16,18 @@
     <link href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/assets/demos.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/css/flag-icons.min.css" rel="stylesheet">
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/typed.js"></script>
 </head>
 <body onload="translate('en','lng-tag')">
     <header>
-        <img src="assets/images/icon.png"/>
+        <a href="/"><img src="assets/images/icon.png"/></a>
         <h1>Tung Nguyen</h1>
         <div class="shortcuts">
             <a class="fi fi-gb" id="enTranslator"></a>
             <a class="fi fi-de" id="deTranslator"></a>
-            <label lng-tag="home"></label>
-            <label lng-tag="projects"></label>
-            <label lng-tag="contact"></label>
-        </div>
-        <div class="shortcuts-mobile">
+            <a href="/" lng-tag="home" class="home"></a>
+            <a href="projects.html" lng-tag="projects" class="projects"></a>
+            <a href="contact.html" lng-tag="contact" class="contact"></a>
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
@@ -97,13 +96,16 @@
                         </div>
                     </section>
                     <article class="code">
-                        <pre><output></output></pre>
+                        <output id="output"></output>
                     </article>
                 </article>
             </div>
         </article>
     </main>
     <footer>
+        <a href="https://visitcount.itsvg.in">
+            <img src="https://visitcount.itsvg.in/api?id=Tung&label=Visits&color=12&icon=0&pretty=false" />
+        </a>
         <article>
             <div class="icons">
                 <a target="_blank" href="https://www.github.com/TungNgyn"><i class="fa-brands fa-github fa-lg"></i></a>

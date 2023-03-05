@@ -1,5 +1,21 @@
 * {
     font-family: 'Lexend Deca', sans-serif;
+    text-decoration: none;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+div {
+    /* animation: fadein 2s; */
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr ;
 }
 
 header {
@@ -7,10 +23,6 @@ header {
     align-items: center;
     padding-left: 5em;
     box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
-}
-
-h1 {
-    font-size: 180%;
 }
 
 header img {
@@ -21,13 +33,10 @@ div.shortcuts {
     margin-left: auto;
     padding-right: 5em;
     display: flex;
-}
-
-div.shortcuts {
     align-items: center;
 }
 
-div.shortcuts-mobile {
+div.shortcuts i {
     display: none;
 }
 
@@ -36,6 +45,7 @@ div.shortcuts i:hover {
 }
 
 div.shortcuts a {
+    color: black;
     margin: 1em;
 }
 
@@ -47,20 +57,24 @@ div.shortcuts label {
     padding: 1em;
 }
 
-main {
-    padding: 5em;
-}
-
 
 a#enTranslator {
     display: none;
 }
 
-article.home {
-    display: flex;
+/* Home */ 
+
+h1 {
+    font-size: 180%;
 }
 
-article.introduction {
+
+article.home {
+    display: flex;
+    padding: 3em;
+}
+
+article.home article.introduction {
     max-width: 85%;
 }
 
@@ -150,7 +164,7 @@ article.window {
 }
 
 article.bottom-articles {
-    padding-top: 5em;
+    padding-top: 2em;
     display: flex;
 }
 
@@ -216,9 +230,13 @@ footer a:hover {
     color: #6b7280;
 }
 
+footer img {
+    display: none;
+}
+
 
 @media screen and (prefers-color-scheme: dark) {
-    main, header, footer, body, html{
+    main, header, footer, body, html, div.shortcuts a{
         background-color: #121212;
         color: #E2E2E2;
     }
@@ -249,16 +267,32 @@ footer a:hover {
 @media screen and (max-width: 768px) {
     header {
         padding: 1em;
+        display: flex;
+        align-items: center;
     }
 
     div.shortcuts {
+        margin-left: auto;
+        padding-right: 0.5em;
+        align-items: center;
+    }
+
+    div.shortcuts i {
+        display: inherit;
+    }
+    
+    div.shortcuts-mobile a:hover {
+        cursor: pointer;
+    }
+
+
+    div.shortcuts a.home,a.projects,a.contact{
         display: none;
     }
 
-    div.shortcuts-mobile {
-        display: block;
-        margin-left: auto;
-        padding-right: 0.5em;
+    
+    i.fa-bars {
+        padding-left: 0.5em;
     }
 
     main{
@@ -282,4 +316,66 @@ footer a:hover {
         padding-top: 1em;
         display: flex;
     }
+}
+
+/* Projects */ 
+
+article.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+article.projects article.introduction {
+    width:100%;
+    padding-top: 2em;
+}
+
+article.projects article.introduction div.headline {
+    text-align: center;
+}
+
+article.projects article.introduction div.subtext {
+    text-align: center;
+}
+
+
+section.card {
+    padding-top: 3em;
+    text-align: center;
+}
+
+.repo-card {
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+
+section.card div.title{
+    font-size: 150%;
+}
+
+
+/* Contact */ 
+
+article.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+article.contact article.introduction {
+    width:100%;
+    padding-top: 2em;
+}
+
+article.contact article.introduction div.headline {
+    text-align: center;
+}
+
+article.contact article.introduction div.subtext {
+    text-align: center;
+}
+
+article.contact button {
+    width: 20em;
 }

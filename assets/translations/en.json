@@ -9,5 +9,15 @@
     "background_subtext":"Experience I have gained",
     "position_retraining":"Retraining",
     "skills_headline":"Skills",
-    "skills_subtext":"Languages, tools and platforms"
+    "skills_subtext":"Languages, tools and platforms",
+
+    "project_title":"Tung Nguyen - Projects",
+    "project_headline":"Projects",
+    "project_subtext":"My past and current projects and work I have done.",
+    "barfbook_description":"The Barf-Cookbook to go!",
+
+    "contact_title":"Tung Nguyen - Contact",
+    "contact_headline":"Contact",
+    "contact_subtext":"All the ways to connect with me."
+    
 }

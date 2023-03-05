@@ -1,38 +1,38 @@
-var lng = 'en';
-// Code text
-const java = 
-'public class ShowcaseApp {\n'+
-    '    public static void main(String[] args) {\n' +
-    '        system.out.println("Hello");\n' +
-    '    }\n' +
-'}';
-
 window.addEventListener("load", event => {
-    // Code Typing
-    var options = {
-        strings: [java],
-        typeSpeed: 100
-    };
-    var typed = new Typed('article.code output', options);
-   
-  
+    // document.querySelector("a.home").addEventListener("click", event => {
+    //     showHome();
+    // });
+
+    // document.querySelector("a.projects").addEventListener("click", event => {
+    //     showProjects();
+    // });
     
-    document.querySelector("#sun").addEventListener("click", event => {
-        darkModeToggle();
-        document.querySelector("#moon").style = "display: inherit;";
-        document.querySelector("#sun").style = "display: none;";
-    })
-
-    document.querySelector("#moon").addEventListener("click", event => {
-        darkModeToggle();
-        document.querySelector("#sun").style = "display: inherit;";
-        document.querySelector("#moon").style = "display: none;";
-    })
-
+    // document.querySelector("a.contact").addEventListener("click", event => {
+    //     showContact();
+    // });
     
 });
 
+// function showHome() {
+//     document.querySelector("article.home").style.display = 'flex';
+//     document.querySelector("article.projects").style.display = 'none';
+//     document.querySelector("article.contact").style.display = 'none';
+// };
+
+// function showProjects() {
+//     document.querySelector("article.home").style.display = 'none';
+//     document.querySelector("article.projects").style.display = 'flex';
+//     document.querySelector("article.contact").style.display = 'none';
+// };
+
+// function showContact() {
+//     document.querySelector("article.home").style.display = 'none';
+//     document.querySelector("article.projects").style.display = 'none';
+//     document.querySelector("article.contact").style.display = 'flex';
+// };
+
 // Translations  
+var lng = 'en';
 function translate(lng, tagAttr){
     var translate = new Translate();
     translate.init(tagAttr, lng);
@@ -51,7 +51,7 @@ function translate(lng, tagAttr){
             document.querySelector("#enTranslator").style = "display: none;";
             document.querySelector("#deTranslator").style = "display: inherit;";
         })
-    }
+    }   
 }
 
 function Translate() {
