@@ -90,7 +90,16 @@ article.introduction div.intro-text {
     color: grey;
 }
 
-section.titlebar {
+ /* Mac */
+article.mac-window  {
+    width: 35em;
+    height: 25em;
+    border: 1px solid #acacac;
+    border-radius: 6px;
+    box-shadow: 0px 0px 20px #acacac;
+}
+
+article.mac-window section.titlebar {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #ebebeb, color-stop(1.0, #d5d5d5)));
   background: -webkit-linear-gradient(top, #ebebeb, #d5d5d5);
   background: -moz-linear-gradient(top, #ebebeb, #d5d5d5);
@@ -105,14 +114,14 @@ section.titlebar {
   border-top-right-radius: 6px;
 }
 
-div.buttons {
+article.mac-window  div.buttons {
     padding-left: 8px;
     padding-top: 3px;
     float: left;
     line-height: 0px;
 }
 
-.close {
+article.mac-window .close {
     background: #ff5c5c;
     font-size: 9pt;
     width: 11px;
@@ -120,9 +129,9 @@ div.buttons {
     border: 1px solid #e33e41;
     border-radius: 50%;
     display: inline-block;
-  }
+}
 
-  .zoom {
+article.mac-window .zoom {
     background: #00ca56;
     font-size: 9pt;
     line-height: 11px;
@@ -132,9 +141,9 @@ div.buttons {
     border: 1px solid #14ae46;
     border-radius: 50%;
     display: inline-block;
-  }
+}
   
-.minimize {
+article.mac-window .minimize {
     background: #ffbd4c;
     font-size: 9pt;
     line-height: 11px;
@@ -145,19 +154,83 @@ div.buttons {
     border-radius: 50%;
     display: inline-block;
 }
+/* End Mac */
 
-article.code output {
+ /* Windows */
+article.windows-window  {
+    height: 25em;
+    border: 1px solid #acacac;
+    border-radius: 2px;
+    box-shadow: 0px 0px 20px #acacac;
+}
+
+
+article.windows-window div {
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+
+
+article.windows-window div:before,
+article.windows-window div:after {
+    top: 30%;
+    right: 30%;
+    bottom: 30%;
+    left: 30%;
+    content: " ";
+    position: absolute;
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+}
+
+article.windows-window .minimize:before {
+    border-bottom-width: 2px;
+}
+  
+article.windows-window .maximize:before {
+    border-width: 1px 1px 2px 1px;
+}
+  
+article.windows-window .close:before,
+article.windows-window .close:after {
+    bottom: 50%;
+    top: 50%;
+}
+  
+article.windows-window .close:before {
+    transform: rotate(45deg);
+}
+  
+article.windows-window .close:after {
+    transform: rotate(-45deg);
+}
+  
+article.windows-window div:hover {
+    background-color: #CCCCCC;
+}
+  
+article.windows-window .close:hover {
+    background-color: #E04343;
+}
+  
+article.windows-window div:hover:after,
+article.windows-window div:hover:before {
+    border-color: #333333;
+}
+  
+article.windows-window .close:hover:after,
+article.windows-window .close:hover:before {
+    border-color: #FFFFFF;
+}
+ /* End Windows */
+
+ article.code output {
     padding: 10px;
     font-family: 'JetBrains Mono', monospace;
     width: 50em;
-}
-
-article.window {
-    width: 35em;
-    height: 25em;
-    border: 1px solid #acacac;
-    border-radius: 6px;
-    box-shadow: 0px 0px 20px #acacac;
 }
 
 article.bottom-articles {
@@ -203,6 +276,21 @@ article.skills {
 
 div.icons img:hover{
     cursor: pointer;
+}
+
+div.icons img.java{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+div.icons:hover span {
+    display: block;
+}
+
+div.icons span {
+    background: #333;
+    color: #fff;
 }
 
 /* Footer */
