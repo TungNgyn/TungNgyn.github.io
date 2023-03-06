@@ -91,90 +91,81 @@ article.introduction div.intro-text {
 }
 
  /* Mac */
-article.mac-window  {
+article.window-mac  {
     width: 35em;
     height: 25em;
     border: 1px solid #acacac;
-    border-radius: 6px;
+    border-radius: 10px;
     box-shadow: 0px 0px 20px #acacac;
 }
 
-article.mac-window section.titlebar {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #ebebeb, color-stop(1.0, #d5d5d5)));
+article.window-mac section.titlebar-mac {
+    
   background: -webkit-linear-gradient(top, #ebebeb, #d5d5d5);
-  background: -moz-linear-gradient(top, #ebebeb, #d5d5d5);
-  background: -ms-linear-gradient(top, #ebebeb, #d5d5d5);
-  background: -o-linear-gradient(top, #ebebeb, #d5d5d5);
-  background: linear-gradient(top, #ebebeb, #d5d5d5);
-  color: #4d494d;
-  height: 20px;
-  border-top: 1px solid #f3f1f3;
-  border-bottom: 1px solid #b1aeb1;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  height: 26px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
 }
 
-article.mac-window  div.buttons {
-    padding-left: 8px;
-    padding-top: 3px;
-    float: left;
-    line-height: 0px;
+article.window-mac div {
+    margin: 4px;
 }
 
-article.mac-window .close {
+article.window-mac .close {
+    margin-left: 1em;
     background: #ff5c5c;
-    font-size: 9pt;
     width: 11px;
     height: 11px;
     border: 1px solid #e33e41;
     border-radius: 50%;
-    display: inline-block;
 }
 
-article.mac-window .zoom {
+article.window-mac .zoom {
     background: #00ca56;
-    font-size: 9pt;
-    line-height: 11px;
-    margin-left: 6px;
     width: 11px;
     height: 11px;
     border: 1px solid #14ae46;
     border-radius: 50%;
-    display: inline-block;
 }
   
-article.mac-window .minimize {
+article.window-mac .minimize {
     background: #ffbd4c;
-    font-size: 9pt;
-    line-height: 11px;
-    margin-left: 4px;
     width: 11px;
     height: 11px;
     border: 1px solid #e09e3e;
     border-radius: 50%;
-    display: inline-block;
 }
 /* End Mac */
 
  /* Windows */
-article.windows-window  {
+article.window-windows  {
+    width: 35em;
     height: 25em;
     border: 1px solid #acacac;
     border-radius: 2px;
     box-shadow: 0px 0px 20px #acacac;
+    background-color: #022456;
+    color: #FFFFFF;
 }
 
 
-article.windows-window div {
+article.window-windows div {
     position: relative;
     float: right;
     width: 30px;
     height: 30px;
 }
 
+article.window-windows section.titlebar-windows {
+    background: #FFFFFF;
+    height: 30px;
+    border: 1px solid #b1aeb1;
+}
 
-article.windows-window div:before,
-article.windows-window div:after {
+article.window-windows div:before,
+article.window-windows div:after {
     top: 30%;
     right: 30%;
     bottom: 30%;
@@ -186,46 +177,83 @@ article.windows-window div:after {
     border-width: 0 0 2px 0;
 }
 
-article.windows-window .minimize:before {
+article.window-windows .minimize:before {
     border-bottom-width: 2px;
 }
   
-article.windows-window .maximize:before {
+article.window-windows .maximize:before {
     border-width: 1px 1px 2px 1px;
 }
   
-article.windows-window .close:before,
-article.windows-window .close:after {
+article.window-windows .close:before,
+article.window-windows .close:after {
     bottom: 50%;
     top: 50%;
 }
   
-article.windows-window .close:before {
+article.window-windows .close:before {
     transform: rotate(45deg);
 }
   
-article.windows-window .close:after {
+article.window-windows .close:after {
     transform: rotate(-45deg);
 }
   
-article.windows-window div:hover {
+article.window-windows div:hover {
     background-color: #CCCCCC;
 }
   
-article.windows-window .close:hover {
+article.window-windows .close:hover {
     background-color: #E04343;
 }
   
-article.windows-window div:hover:after,
-article.windows-window div:hover:before {
+article.window-windows div:hover:after,
+article.window-windows div:hover:before {
     border-color: #333333;
 }
   
-article.windows-window .close:hover:after,
-article.windows-window .close:hover:before {
+article.window-windows .close:hover:after,
+article.window-windows .close:hover:before {
     border-color: #FFFFFF;
 }
  /* End Windows */
+
+ /*  Linux */
+ article.window-linux {
+    width: 35em;
+    height: 25em;
+    border: 1px solid #acacac;
+    border-radius: 6px;
+    box-shadow: 0px 0px 20px #acacac;
+    background: rgba(56, 4, 40, .9);
+  }
+  
+  section.titlebar-linux {
+    background: linear-gradient(#504b45 0%,#3c3b37 100%);
+    height: 25px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  section.titlebar-linux div{
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: linear-gradient(#7d7871 0%, #595953 100%);
+    border: none;
+    margin: 2px;
+  }
+  section.titlebar-linux div:hover {
+    cursor: default;
+  }
+  section.titlebar-linux div.close {
+    margin-left: 0.5em;
+    background: linear-gradient(#f37458 0%, #de4c12 100%);
+  }
+  
+ /* End Linux */
 
  article.code output {
     padding: 10px;
@@ -331,29 +359,20 @@ footer img {
         background-color: #121212;
         color: #E2E2E2;
     }
-}
 
-@media screen and (prefers-color-scheme: dark) {
-    section.titlebar {
-        background-color: #202124;
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #202124, color-stop(1.0, #202124)));
-        background: -webkit-linear-gradient(top, #202124, #202124);
-        background: -moz-linear-gradient(top, #202124, #202124);
-        background: -ms-linear-gradient(top, #202124, #202124);
-        background: -o-linear-gradient(top, #202124, #202124);
-        background: linear-gradient(top, #202124, #202124);
-        border-top: 1px solid #35363a;
-        border-bottom: 1px solid #35363a;
+    article.window-mac {
+        background-color: #1e1e1e;
+    }
+
+    article.window-mac section.titlebar-mac {
+        background: -webkit-linear-gradient(top, #39343d, #39343d);
+        height: 26px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        align-items: center;
     }
 }
-
-@media screen and (prefers-color-scheme: dark) {
-    article.window {
-        border: 1px solid #35363a;
-        box-shadow: 0px 0px 20px #35363a;
-    }
-}
-
 
 @media screen and (max-width: 768px) {
     header {
