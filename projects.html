@@ -4,43 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title lng-tag="project_title">Tung Nguyen - Projects</title>
-    <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+    <title data-translatekey="title">Tung Nguyen</title>
     <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/icon.png">
     <script src="https://kit.fontawesome.com/b087176bbf.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/assets/demos.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/css/flag-icons.min.css" rel="stylesheet">
     <script src="assets/scripts/script.js"></script>
 </head>
-<body onload="translate('en','lng-tag')">
+<body>
     <header>
         <a href="/"><img src="assets/images/icon.png"/></a>
         <h1>Tung Nguyen</h1>
         <div class="shortcuts">
             <a class="fi fi-gb" id="enTranslator"></a>
             <a class="fi fi-de" id="deTranslator"></a>
-            <a href="/" lng-tag="home" class="home"></a>
-            <a href="projects.html" lng-tag="projects" class="projects"></a>
-            <a href="contact.html" lng-tag="contact" class="contact"></a>
+            <a href="/" data-translatekey="home" class="home"></a>
+            <a href="projects.html" data-translatekey="projects" class="projects"></a>
+            <a href="contact.html" data-translatekey="contact" class="contact"></a>
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
     <main>
         <article class="projects">
             <article class="introduction">
-                    <div class="headline" lng-tag="project_headline"> </div>
-                    <div class="subtext" lng-tag="project_subtext"></div>
+                    <div class="headline" data-translatekey="project_headline"> </div>
+                    <div class="subtext" data-translatekey="project_subtext"></div>
             </article>
             <article class="project">
                 <section class="card">
                     <div class="title">Barfbook</div>
                     <!-- <a target="_blank" href="https://github.com/TungNgyn/barfbookapp"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/TungNgyn/barfbookapp.png" width="460px"></a> -->
                     <div class="repo-card" data-repo="TungNgyn/barfbookapp"></div>
-                    <div class="description" lng-tag="barfbook_description"></div>
+                    <div class="description" data-translatekey="barfbook_description"></div>
                 </section>
             </article>
     </main>
@@ -62,5 +60,9 @@
             </div>
         </article>
     </footer>
+    <script src="assets/translations/tinyi18n.js"></script>
+    <script>
+        tinyi18n.loadTranslations('assets/translations/translations.json')
+    </script>
 </body>
 </html>

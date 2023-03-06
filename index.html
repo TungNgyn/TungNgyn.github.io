@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tung Nguyen</title>
+    <title data-translatekey="title">Tung Nguyen</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,43 +18,44 @@
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/typed.js"></script>
 </head>
-<body onload="translate('en','lng-tag')">
+<body>
     <header>
         <a href="/"><img src="assets/images/icon.png"/></a>
         <h1>Tung Nguyen</h1>
         <div class="shortcuts">
             <a class="fi fi-gb" id="enTranslator"></a>
             <a class="fi fi-de" id="deTranslator"></a>
-            <a href="/" lng-tag="home" class="home"></a>
-            <a href="projects.html" lng-tag="projects" class="projects"></a>
-            <a href="contact.html" lng-tag="contact" class="contact"></a>
+            <a href="/" data-translatekey="home" class="home"></a>
+            <a href="projects.html" data-translatekey="projects" class="projects"></a>
+            <a href="contact.html" data-translatekey="contact" class="contact"></a>
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
+    
     <main>
         <article class="home">
             <div class="left">
                 <article class="introduction">
                     <section class="Text">
-                        <div class="headline" lng-tag="intro_headline"> </div>
-                        <div class="subtext" lng-tag="intro_subtext"></div>
-                        <div class="intro-text" lng-tag="intro-text"></div>
+                        <div class="headline" data-translatekey="intro_headline"> </div>
+                        <div class="subtext" data-translatekey="intro_subtext"></div>
+                        <div class="intro-text" data-translatekey="intro-text"></div>
                     </section>
                 </article>
                 <article class="bottom-articles">
                     <article class="experience">
-                        <div class="headline" lng-tag="background_headline"></div>
-                        <div class="subtext" lng-tag="background_subtext"></div>
+                        <div class="headline" data-translatekey="background_headline"></div>
+                        <div class="subtext" data-translatekey="background_subtext"></div>
                         <section class="field">
-                            <div class="position" lng-tag="position_retraining"></div>
+                            <div class="position" data-translatekey="position_retraining"></div>
                             <div class="company">dama.go GmbH</div>
                             <div class="timeline">Feb. 2022 - Feb. 2024</div>
                         </section>
                     </article>
 
                     <article class="skills">
-                        <div class="headline" lng-tag="skills_headline"></div>
-                        <div class="subtext" lng-tag="skills_subtext"></div>
+                        <div class="headline" data-translatekey="skills_headline"></div>
+                        <div class="subtext" data-translatekey="skills_subtext"></div>
                         <div class="icons">
                             <img src="https://cdn.jsdelivr.net/npm/devicon/icons/java/java-original.svg" width="32" height="32"/>
                             <img src="https://cdn.jsdelivr.net/npm/devicon/icons/kotlin/kotlin-original.svg" width="32" height="32"/>
@@ -96,12 +97,13 @@
                         </div>
                     </section>
                     <article class="code">
-                        <output id="output"></output>
+                        <pre><output id="output"></output></pre>
                     </article>
                 </article>
             </div>
         </article>
     </main>
+
     <footer>
         <a href="https://visitcount.itsvg.in">
             <img src="https://visitcount.itsvg.in/api?id=Tung&label=Visits&color=12&icon=0&pretty=false" />
@@ -120,5 +122,10 @@
             </div>
         </article>
     </footer>
+    
+    <script src="assets/translations/tinyi18n.js"></script>
+    <script>
+        tinyi18n.loadTranslations('assets/translations/translations.json')
+    </script>
 </body>
 </html>

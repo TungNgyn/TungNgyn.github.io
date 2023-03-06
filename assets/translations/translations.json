@@ -1,0 +1,82 @@
+{
+	"default_language": "en",
+	"languages": ["en", "de"],
+	"translations": {
+		"title": {
+			"en": "Tung-Nguyen",
+			"de": "Tung-Nguyen"
+		},
+		"home": {
+			"en": "Home",
+			"de": "Home"
+		},
+		"projects": {
+			"en": "Projects",
+			"de": "Projekte"
+		},
+		"contact": {
+			"en": "Contact",
+			"de": "Kontakte"
+		},
+		"intro_headline": {
+			"en": "Hello",
+			"de": "Hallo"
+		},
+		"intro_subtext": {
+			"en": "I'm Tung, (aspiring) mobile app developer and full-stack web developer.",
+			"de": "Ich bin Tung, (angehender) Mobile-App-Entwickler und Full-Stack Webdeveloper"
+		},
+		"intro-text": {
+			"en": "Currently based in Berlin, Germany retraining to start an IT career. I have a strong interest specializing in mobile development as well as full-stack web development.",
+			"de": "Momentan lebe ich in Berlin, Deutschland und absolviere eine Umschulung, um eine IT-Karriere zu starten. Ich habe sowohl ein starkes Interesse, mich in die Mobile-App-Entwicklung, als auch in die Full-Stack Webentwicklung zu spezialisieren."
+		},
+		"background_headline": {
+			"en": "Background",
+			"de": "Werdegang"
+		},
+		"background_subtext": {
+			"en": "Experience I have gained",
+			"de": "Meine Erfahrung"
+		},
+		"position_retraining": {
+			"en": "Retraining",
+			"de": "Umschulung"
+		},
+		"skills_headline": {
+			"en": "Skills",
+			"de": "Kompetenzen"
+		},
+		"skills_subtext": {
+			"en": "Languages, tools and platforms",
+			"de": "Sprachen, Programme und Plattformen"
+		},
+		"project_title": {
+			"en": "Tung Nguyen - Projects",
+			"de": "Tung Nguyen - Projekte"
+		},
+		"project_headline": {
+			"en": "Projects",
+			"de": "Projekte"
+		},
+		"project_subtext": {
+			"en": "My past and current projects and work I have done.",
+			"de": "Meine früheren und aktuellen Projekte, an denen ich gearbeitet hatte."
+		},
+		"barfbook_description": {
+			"en": "The Barf-Cookbook to go!",
+			"de": "Das Barf-Kochburg für unterwegs!"
+		},
+		"contact_title": {
+			"en": "Tung Nguyen - Contact",
+			"de": "Tung Nguyen - Kontakt"
+		},
+		"contact_headline": {
+			"en": "Contact",
+			"de": "Kontakt"
+		},
+		"contact_subtext": {
+			"en": "All the ways to connect with me.",
+			"de": "Alle Möglichkeiten sich mit mir in Verbindung zu setzen."
+		}
+	}
+}
