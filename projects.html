@@ -13,6 +13,10 @@
     <link href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/assets/demos.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/css/flag-icons.min.css" rel="stylesheet">
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/translations/tinyi18n.js"></script>
+    <script>
+        tinyi18n.loadTranslations('assets/translations/translations.json')
+    </script>
 </head>
 <body>
     <header>
@@ -23,7 +27,7 @@
             <a class="fi fi-de" id="deTranslator"></a>
             <a href="/" data-translatekey="home" class="home"></a>
             <a href="projects.html" data-translatekey="projects" class="projects"></a>
-            <a href="contact.html" data-translatekey="contact" class="contact"></a>
+            <!-- <a href="contact.html" data-translatekey="contact" class="contact"></a> -->
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
@@ -60,9 +64,5 @@
             </div>
         </article>
     </footer>
-    <script src="assets/translations/tinyi18n.js"></script>
-    <script>
-        tinyi18n.loadTranslations('assets/translations/translations.json')
-    </script>
 </body>
 </html>

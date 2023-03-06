@@ -1,0 +1,3 @@
+{
+    "string1":"public class ShowcaseApp {\n    public static void main (String[] args) {\n        system.out.println('Hello, World');\n    }\n}"
+}

@@ -8,9 +8,6 @@
     to   { opacity: 1; }
 }
 
-div {
-    /* animation: fadein 2s; */
-}
 
 body {
     display: grid;
@@ -164,7 +161,7 @@ article.window {
 }
 
 article.bottom-articles {
-    padding-top: 2em;
+    padding-top: 10em;
     display: flex;
 }
 
@@ -178,7 +175,6 @@ article.bottom-articles article div.subtext {
     font-size: 80%;
     color: grey;
 }
-
 
 section.field div.position {
     padding-top: 1em;
@@ -195,14 +191,21 @@ section.field div.timeline {
     color: grey;
 }
 
+
+article.skills div.subtext {
+    padding-bottom: 1em;
+}
+
 article.skills {
     padding-left: 10em;
 }
 
-div.icons {
-    padding-top: 1em;
+
+div.icons img:hover{
+    cursor: pointer;
 }
 
+/* Footer */
 footer{
     display: flex;
     justify-content: center;
@@ -336,12 +339,20 @@ article.projects article.introduction div.headline {
 
 article.projects article.introduction div.subtext {
     text-align: center;
+    font-size: 110%;
+    color: gray;
+    padding-bottom: 3em;
 }
 
-
 section.card {
-    padding-top: 3em;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+    width: 25em;
+    
+    border-radius: 1em;
+    box-shadow: 0px 0px 20px #acacac;
 }
 
 .repo-card {
@@ -349,14 +360,21 @@ section.card {
     margin-left: auto;
     margin-right: auto;
     width: 20em;
+    
+    border-radius: 1em;
 }
 
 section.card div.title{
     font-size: 150%;
+    font-weight: bold;
+}
+section.card div.description{
+    color: gray;
 }
 
 
 /* Contact */ 
+
 
 article.contact {
     display: flex;
@@ -376,6 +394,10 @@ article.contact article.introduction div.subtext {
     text-align: center;
 }
 
+article.button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 article.contact button {
     width: 20em;
 }

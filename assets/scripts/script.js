@@ -11,5 +11,7 @@ window.addEventListener("load", event => {
         document.querySelector("#enTranslator").style = "display: none;";
         tinyi18n.getLang() == 'en' ? tinyi18n.setLang('de') : tinyi18n.setLang('en')
     });
+
+
 });
 

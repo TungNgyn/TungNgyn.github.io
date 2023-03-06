@@ -17,6 +17,10 @@
     <link href="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/css/flag-icons.min.css" rel="stylesheet">
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/typed.js"></script>
+    <script src="assets/translations/tinyi18n.js"></script>
+    <script>
+        tinyi18n.loadTranslations('assets/translations/translations.json')
+    </script>
 </head>
 <body>
     <header>
@@ -27,7 +31,7 @@
             <a class="fi fi-de" id="deTranslator"></a>
             <a href="/" data-translatekey="home" class="home"></a>
             <a href="projects.html" data-translatekey="projects" class="projects"></a>
-            <a href="contact.html" data-translatekey="contact" class="contact"></a>
+            <!-- <a href="contact.html" data-translatekey="contact" class="contact"></a> -->
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
@@ -57,28 +61,28 @@
                         <div class="headline" data-translatekey="skills_headline"></div>
                         <div class="subtext" data-translatekey="skills_subtext"></div>
                         <div class="icons">
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/java/java-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/kotlin/kotlin-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/csharp/csharp-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/javascript/javascript-original.svg"width="32" height="32" />
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/dart/dart-original.svg" width="32" height="32" />
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/flutter/flutter-original.svg" width="32" height="32" />
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/java/java-original.svg" width="32" height="32" class="java"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/kotlin/kotlin-original.svg" width="32" height="32" class="kotlin"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/csharp/csharp-original.svg" width="32" height="32" class="csharp"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/javascript/javascript-original.svg"width="32" height="32" class="js" />
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/dart/dart-original.svg" width="32" height="32" class="dart" />
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/flutter/flutter-original.svg" width="32" height="32" class="flutter" />
                         </div>
-                        <div>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/html5/html5-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/css3/css3-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/bash/bash-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/docker/docker-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/git/git-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/mysql/mysql-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/postgresql/postgresql-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/vim/vim-original.svg" width="32" height="32"/>
+                        <div class="icons">
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/html5/html5-original.svg" width="32" height="32" class="html"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/css3/css3-original.svg" width="32" height="32" class="css"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/bash/bash-original.svg" width="32" height="32" class="bash"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/docker/docker-original.svg" width="32" height="32" class="docker"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/git/git-original.svg" width="32" height="32" class="git"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/mysql/mysql-original.svg" width="32" height="32" class="mysql"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/postgresql/postgresql-original.svg" width="32" height="32" class="postgresql"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/vim/vim-original.svg" width="32" height="32" class="vim"/>
                         </div>
-                        <div>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/windows8/windows8-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/linux/linux-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/apple/apple-original.svg" width="32" height="32"/>
-                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/android/android-original.svg" width="32" height="32"/>
+                        <div class="icons">
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/windows8/windows8-original.svg" width="32" height="32". class="windows"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/linux/linux-original.svg" width="32" height="32" class="linux"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/apple/apple-original.svg" width="32" height="32" class="ios"/>
+                            <img src="https://cdn.jsdelivr.net/npm/devicon/icons/android/android-original.svg" width="32" height="32" class="android"/>
                         </div> 
                     </article>
                 </article>
@@ -100,6 +104,7 @@
                         <pre><output id="output"></output></pre>
                     </article>
                 </article>
+                
             </div>
         </article>
     </main>
@@ -122,10 +127,5 @@
             </div>
         </article>
     </footer>
-    
-    <script src="assets/translations/tinyi18n.js"></script>
-    <script>
-        tinyi18n.loadTranslations('assets/translations/translations.json')
-    </script>
 </body>
 </html>
