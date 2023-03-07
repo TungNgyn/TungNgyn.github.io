@@ -8,13 +8,6 @@
     to   { opacity: 1; }
 }
 
-
-body {
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr ;
-}
-
 header {
     display: flex;
     align-items: center;
@@ -146,12 +139,12 @@ article.window-windows  {
     border: 1px solid #acacac;
     border-radius: 2px;
     box-shadow: 0px 0px 20px #acacac;
-    background-color: #022456;
+    background-color: #0C0C0C;
     color: #FFFFFF;
 }
 
 
-article.window-windows div {
+article.window-windows section.titlebar-windows div {
     position: relative;
     float: right;
     width: 30px;
@@ -226,6 +219,7 @@ article.window-windows .close:hover:before {
     border-radius: 6px;
     box-shadow: 0px 0px 20px #acacac;
     background: rgba(56, 4, 40, .9);
+    color: white;
   }
   
   section.titlebar-linux {
@@ -255,10 +249,12 @@ article.window-windows .close:hover:before {
   
  /* End Linux */
 
+ article.code {
+    padding-left: 1em;
+ }
+
  article.code output {
-    padding: 10px;
     font-family: 'JetBrains Mono', monospace;
-    width: 50em;
 }
 
 article.bottom-articles {
@@ -323,6 +319,8 @@ div.icons span {
 
 /* Footer */
 footer{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     display: flex;
     justify-content: center;
     box-shadow:  0 -1px 2px 0px rgba(0,0,0,0.1);
