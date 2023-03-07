@@ -7,6 +7,11 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+body {
+    min-height: 100vh; 
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 
 header {
     display: flex;
@@ -17,6 +22,10 @@ header {
 
 header img {
     width: 5em;
+}
+
+header img:hover {
+    opacity: 0.5;
 }
 
 div.shortcuts {
@@ -37,6 +46,10 @@ div.shortcuts i:hover {
 div.shortcuts a {
     color: black;
     margin: 1em;
+}
+
+div.shortcuts a:hover {
+  color: #555555;
 }
 
 div.shortcuts a:hover {
@@ -250,7 +263,8 @@ article.window-windows .close:hover:before {
  /* End Linux */
 
  article.code {
-    padding-left: 1em;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
  }
 
  article.code output {
@@ -258,12 +272,11 @@ article.window-windows .close:hover:before {
 }
 
 article.bottom-articles {
-    padding-top: 10em;
     display: flex;
 }
 
 article.bottom-articles article div.headline {
-    padding-top: 3em;
+    padding-top: 2em;
     font-size: 130%;
     font-weight: bold;
 }
@@ -294,27 +307,12 @@ article.skills div.subtext {
 }
 
 article.skills {
-    padding-left: 10em;
+    padding-left: 5em;
 }
 
 
 div.icons img:hover{
     cursor: pointer;
-}
-
-div.icons img.java{
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-div.icons:hover span {
-    display: block;
-}
-
-div.icons span {
-    background: #333;
-    color: #fff;
 }
 
 /* Footer */
@@ -349,81 +347,6 @@ footer a:hover {
 
 footer img {
     display: none;
-}
-
-
-@media screen and (prefers-color-scheme: dark) {
-    main, header, footer, body, html, div.shortcuts a{
-        background-color: #121212;
-        color: #E2E2E2;
-    }
-
-    article.window-mac {
-        background-color: #1e1e1e;
-    }
-
-    article.window-mac section.titlebar-mac {
-        background: -webkit-linear-gradient(top, #39343d, #39343d);
-        height: 26px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        display: flex;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        padding: 1em;
-        display: flex;
-        align-items: center;
-    }
-
-    div.shortcuts {
-        margin-left: auto;
-        padding-right: 0.5em;
-        align-items: center;
-    }
-
-    div.shortcuts i {
-        display: inherit;
-    }
-    
-    div.shortcuts-mobile a:hover {
-        cursor: pointer;
-    }
-
-
-    div.shortcuts a.home,a.projects,a.contact{
-        display: none;
-    }
-
-    
-    i.fa-bars {
-        padding-left: 0.5em;
-    }
-
-    main{
-        padding: 2em;
-    }
-
-    article.skills {
-        padding-left: 3em;
-    }
-
-    article.home {
-        display: block;
-    }
-    
-    div.right {
-        display: none;
-        padding-top: 2em;
-    }
-
-    article.bottom-articles {
-        padding-top: 1em;
-        display: flex;
-    }
 }
 
 /* Projects */ 
@@ -505,4 +428,131 @@ article.button-container {
 }
 article.contact button {
     width: 20em;
+}
+
+
+
+@media screen and (prefers-color-scheme: dark) {
+    main, header, footer, body, html, div.shortcuts a{
+        background-color: #121212;
+        color: #E2E2E2;
+    }
+
+    article.window-mac {
+        background-color: #1e1e1e;
+    }
+
+    article.window-mac section.titlebar-mac {
+        background: -webkit-linear-gradient(top, #39343d, #39343d);
+        height: 26px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.5em;
+        font-size: 90%;
+        padding-left: 0.1em;
+    }
+
+    header h1 {
+        font-size: 160%;
+    }
+
+    div.shortcuts {
+        display: none;
+        margin: 0px;
+        padding-right: 0em;
+
+        
+        margin-left: 1px;
+        display: flex;
+    }
+
+    div.shortcuts i {
+        display: inherit;
+    }
+
+    div.shortcuts a.home,a.projects,a.contact{
+        margin: auto;
+        padding: 0.1em;
+    }
+    
+
+    article.home article.introduction {
+        max-width: 100%;
+    }
+
+    article.skills {
+        padding-left: 0em;
+    }
+    
+    article.bottom-articles {
+        display: block;
+    }
+
+    article.home {
+        display: block;
+        padding: 1em;
+    }
+    
+    div.right {
+        display: none;
+    }
+    
+    /* Projects */
+
+    article.projects {
+        display: block;
+        padding: 1em;
+    }
+    
+
+    article.projects article.introduction {
+        padding-top: 0.5em;
+    }
+
+    article.projects article.introduction div.headline {
+        text-align: center;
+    }
+
+    article.projects article.introduction div.subtext {
+        text-align: center;
+        font-size: 110%;
+        color: gray;
+        padding-bottom: 2em;
+    }
+
+    section.card {
+        padding: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 15em;
+        
+        border-radius: 1em;
+        box-shadow: 0px 0px 20px #acacac;
+    }
+
+    .repo-card {
+        padding: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10em;
+        border-radius: 1em;
+    }
+
+    section.card div.title{
+        font-size: 150%;
+        font-weight: bold;
+    }
+    section.card div.description{
+        color: gray;
+    }
+
+
 }
