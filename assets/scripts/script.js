@@ -18,41 +18,33 @@ window.addEventListener("load", event => {
             element.style.opacity = value.toString();
         }, framerate)
     }
-    // Element reference
-    // const element = document.querySelector('#deTranslator');
-
-    // // Fade in and out on click
-    // element.addEventListener('click', e => {
-    //     fadeTo(document.querySelector('*'), 0, 1000);
-        
-    //     setTimeout(() => {
-    //         fadeTo(document.querySelector('*'), 1.0, 500);
-    //     }, 1000);
-    // });
-    document.querySelector('#deTranslator').addEventListener("click", event => {
-        document.querySelectorAll('[data-translatekey], div.icons img, div.shortcuts').forEach(el => fadeTo(el, 0, 500));
-        
+    
+    let deTranslate, enTranslate;
+    deTranslate = event => {
+        document.querySelectorAll('[data-translatekey], div.icons img, div.shortcuts, section.field div').forEach(el => fadeTo(el, 0, 500));
         
         setTimeout(() => {            
             document.querySelector("#enTranslator").style = "display: inherit;";
             document.querySelector("#deTranslator").style = "display: none;";
-            tinyi18n.getLang() == 'en' ? tinyi18n.setLang('de') : tinyi18n.setLang('en')       
-            document.querySelectorAll('[data-translatekey], div.icons img, div.shortcuts').forEach(el => fadeTo(el, 1, 500));
+            tinyi18n.setLang('de');     
+            document.querySelectorAll('[data-translatekey], div.icons img, div.shortcuts, section.field div').forEach(el => fadeTo(el, 1, 1000));
             }, 1000);
-    });
+    };
 
-    
-    document.querySelector('#enTranslator').addEventListener("click", event => {
-        document.querySelectorAll('[data-translatekey], div.icons img, div.shortcuts').forEach(el => fadeTo(el, 0, 500));
-
+    enTranslate = event => {
+        document.querySelectorAll('[data-translatekey], div.icons img, div.shortcuts, section.field div').forEach(el => fadeTo(el, 0, 500));
         
         setTimeout(() => {            
             document.querySelector("#deTranslator").style = "display: inherit;";
             document.querySelector("#enTranslator").style = "display: none;";
-            tinyi18n.getLang() == 'en' ? tinyi18n.setLang('de') : tinyi18n.setLang('en')
-         document.querySelectorAll('[data-translatekey], div.icons img, div.shortcuts, div.icons img, div.shortcuts').forEach(el => fadeTo(el, 1, 500));
+            tinyi18n.setLang('en');
+            document.querySelectorAll('[data-translatekey], div.icons img, div.shortcuts, section.field div').forEach(el => fadeTo(el, 1, 1000));
     }, 1000);
-    });
+    }
+
+    document.querySelector('#deTranslator').addEventListener("click", deTranslate);
+    
+    document.querySelector('#enTranslator').addEventListener("click", enTranslate);
 
 });
 
