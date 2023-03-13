@@ -15,11 +15,11 @@ window.addEventListener("load", event => {
     const flutter1 = ('void main() {\n   ^1000 runApp(MainApp());\n}\n\n class MainApp extends StatelessWidget {\n   ^1000 const MainApp({super.key});\n\n  ^1000  @override\n  ^1000  Widget build(BuildContext context) {\n      ^1000  return Scaffold();\n    }\n}');
     
 
-    const html1 = ("<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n</head>");
+    const html1 = ("<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Document</title>\n</head>");
 
     const css1 = ("header {\n    display: flex;\n    align-items: center;\n    padding-left: 5em;\n    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);\n}\n\nheader img {\n    width: 5em;\n}\n\ndiv.shortcuts {\n    margin-left: auto;\n    padding-right: 5em;\n    display: flex;\n    align-items: center;\n}");
     
-    const bash1 = ("`root@tung:~#` mkdir greetings\n`root@tung:~#` cd greetings\n`root@tung:~/greetings#` echo 'Hello, World' > greeting.txt\n`root@tung:~/greetings#` cat greetings.txt\n`Hello, World`");
+    const bash1 = ("`root@tung:~#` mkdir greetings\n`root@tung:~#` cd greetings\n`root@tung:~/greetings#` echo 'Hello, World' > greeting.txt\n`root@tung:~/greetings#` cat greeting.txt\n`Hello, World\nroot@tung:~/greetings#`");
     
     const docker1 = ("`root@tung:~#` docker image ls ^500 \n`REPOSITORY   TAG     IMAGE ID       CREATED       SIZE\ncentos       latest  5d0da3dc9764   17 months ago 231MB`\n`root@tung:~#`^2000 docker container run -it centos /bin/bash\n`[root@f65ffdb000ab /]#`^2000 ls\n`bin dev etc home lib media root sbin sys usr var\n[root@f65ffdb000ab /]# `^2000 ");
 
